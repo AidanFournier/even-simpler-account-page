@@ -16,7 +16,7 @@ nav {
 
 .nav-toggle {
   font-size: 1.5rem;
-  color: blue;
+  color: $blue;
   background: transparent;
   border-color: transparent;
   transition: all 0.3s linear;
@@ -24,10 +24,65 @@ nav {
 }
 
 .nav-toggle:hover {
-  color: hsl(205, 86%, 17%);
+  color: $purple;
   transform: rotate(90deg);
 }
 
 .logo {
   height: 30px;
+}
+
+.links a {
+  color: $blue;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s linear;
+}
+
+.links a:hover {
+  background: $light-blue;
+  color: $purple;
+  padding-left: 1.5rem;
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.show-links {
+  height: 10rem;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
 }

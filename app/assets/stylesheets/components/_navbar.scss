@@ -1,12 +1,33 @@
-.navbar-lewagon {
-  justify-content: space-between;
+nav {
   background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.logo {
+  min-height: 60px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: blue;
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  color: hsl(205, 86%, 17%);
+  transform: rotate(90deg);
+}
+
+.logo {
+  height: 30px;
 }

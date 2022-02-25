@@ -32,6 +32,8 @@ gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'bcrypt', '3.1.7'
+gem 'strong_password', '~> 0.0.9'
+gem 'bootstrap'
 
 group :development, :test do
   gem 'pry-byebug'

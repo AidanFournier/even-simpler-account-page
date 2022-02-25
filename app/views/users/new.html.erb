@@ -1,2 +1,16 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= javascript_pack_tag 'hello_react' %>
+
+<h2>Sign up to create your account today</h2>
+
+<%= simple_form_for @user, local: true do |f| %>
+    <%= f.input :first_name %><%= f.input :last_name %>
+    <br>
+
+    <%= f.input :email %>
+    <br>
+
+    <%= f.label :password %><br>
+    <%= f.password_field :password %><br>
+
+    <%= f.submit "Sign Up" %>
+<% end %>

@@ -1,5 +1,9 @@
+require 'gravtastic'
+
 class User < ApplicationRecord
-    
+    include Gravtastic
+    is_gravtastic
+
     has_secure_password
     
     validates :first_name, presence: true

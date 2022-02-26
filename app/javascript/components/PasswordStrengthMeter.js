@@ -8,11 +8,11 @@ const PasswordStrengthMeter = ({ password }) => {
     const createPasswordLabel = () => {
         switch(testResult.score) {
             case 0:
-              return 'Are you sure?';
+              return "Make sure it's strong!";
             case 1:
               return 'Meh';
             case 2:
-              return "It'll do";
+              return "It'll do...";
             case 3:
               return 'Much better';
             case 4:

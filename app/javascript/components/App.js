@@ -8,8 +8,8 @@ function App() {
         console.log(password);
 
         return(
-            <div className="container">
-                <div className="col-md-6 mx-auto text-right">
+            <div className="form">
+                <div className="col-md-6 mx-auto text-end">
                     <div className="form-group mb-1">
                         <input 
                             type="password" 

@@ -9,7 +9,7 @@ function App() {
 
         return(
             <div className="container">
-                <div className="col-md-6 mx-auto">
+                <div className="col-md-6 mx-auto text-right">
                     <div className="form-group mb-1">
                         <input 
                             type="password" 

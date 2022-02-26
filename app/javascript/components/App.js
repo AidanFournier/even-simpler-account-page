@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import PasswordStrengthMeter from './PasswordStrengthMeter';
-import { useState } from 'react'
 
-class App extends Component {
-    render() {
+function App() {
+    
 
         const [ password, setPassword ] = useState('');
         console.log(password);
@@ -23,7 +22,7 @@ class App extends Component {
                 </div>
             </div>
         )
-    }
+    
 }
 
 export default App;

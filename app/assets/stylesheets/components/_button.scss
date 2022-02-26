@@ -1,0 +1,14 @@
+.small-button {
+  border-radius: 4px;
+  padding: 6px 32px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: $light-blue;
+  transition: background-color 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-style: none;
+  color: white;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.34);
+}
+
+.small-button:hover {
+  background-color: $purple;
+}

@@ -1,9 +1,12 @@
-<%= javascript_pack_tag 'hello_react' %>
-
+<%#= javascript_pack_tag 'hello_react' %>
+<div class="container form">
 <h2>Sign up to create your account today</h2>
 
 <%= simple_form_for @user, local: true do |f| %>
-    <%= f.input :first_name %><%= f.input :last_name %>
+    <div class="d-flex">
+        <div class="me-4"><%= f.input :first_name %></div>
+        <div><%= f.input :last_name %></div>
+    </div>
     <br>
 
     <%= f.input :email %>
@@ -12,5 +15,6 @@
     <%= f.label :password %><br>
     <%= f.password_field :password %><br>
 
-    <%= f.submit "Sign Up" %>
+    <%= f.submit "Sign Up", class:"small-button mt-5" %>
 <% end %>
+</div>

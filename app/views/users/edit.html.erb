@@ -1,2 +1,19 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="form">
+    <h1>Update your account information.</h1>
+
+    <%= simple_form_for @user, local: true do |f| %>
+        <div class="d-flex">
+            <div class="me-4"><%= f.input :first_name %></div>
+            <div><%= f.input :last_name %></div>
+        </div>
+        <br>
+
+        <div><%= f.input :email %></div>
+        <br>
+
+        <%= f.label :password %><br>
+        <%= f.password_field :password %><br>
+
+        <%= f.submit "Confirm Changes", class:"small-button mt-5" %>
+    <% end %>
+</div>

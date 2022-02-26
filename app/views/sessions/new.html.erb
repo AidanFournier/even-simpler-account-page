@@ -1,2 +1,13 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="form">
+    <h2>Log in to access your account.</h2>
+
+    <%= simple_form_for :sessions, local: true do |f| %>
+        <div><%= f.input :email %></div>
+        <br>
+
+    <%= f.label :password %><br>
+    <%= f.password_field :password %><br>
+
+    <%= f.submit "Login", class:"small-button mt-5" %>
+    <% end %>
+</div>

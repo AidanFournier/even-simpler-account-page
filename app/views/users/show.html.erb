@@ -1,3 +1,21 @@
-<h1>Welcome <%= current_user.first_name%></h1>
-<%= link_to "Edit Account", edit_user_path(current_user) %>
-<%= link_to "Delete Account", current_user, data: { confirm: "Are you sure?" }, method: :delete %>
+<h3 class="m-5">How's your day going, <%= current_user.first_name%>?</h3>
+
+<div class="profile-container">
+    <div>
+        <%= image_tag @user.gravatar_url, class: "gravatar avatar-large" %>
+    </div>
+    <div class="profile-info">
+        <h4>Name</h4>
+        <div class="full-name">
+            <p><%= @user.first_name %>
+            <%= @user.last_name %></p>
+        </div>
+        <div>
+            <h4>Email address</h4>
+            <p><%= @user.email %></p>
+        </div>
+        <button class="btn-large">
+            <%= link_to "Edit Account", edit_user_path(current_user) %>
+        </button>
+    </div>
+</div>

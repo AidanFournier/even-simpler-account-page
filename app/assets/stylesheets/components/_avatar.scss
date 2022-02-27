@@ -4,24 +4,19 @@
 }
 
 .avatar-large {
-  height: 15rem;
+  height: 36vh;
   border-radius: 68% 46% 76% 57% / 66% 42% 60% 59%;
   filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.19));
-  margin-right: 20px;
   padding-right: 20px;
   object-fit: cover;
 }
 
-.avatar-bordered {
-  width: 40px;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  border: white 1px solid;
-}
-
-.avatar-square {
-  width: 40px;
-  border-radius: 0px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  border: white 1px solid;
+@media screen and (max-width: 800px) {
+  .avatar-large {
+    height: 24vh;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 68% 46% 76% 57% / 66% 42% 60% 59%;
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.19));
+  }
 }

@@ -2,20 +2,22 @@
 
 <div class="profile-container">
     <div>
-        <%= image_tag @user.gravatar_url, class: "gravatar avatar-large" %>
+        <%= image_tag current_user.gravatar_url, class: "gravatar avatar-large" %>
     </div>
     <div class="profile-info">
         <h4>Name</h4>
         <div class="full-name">
-            <p><%= @user.first_name %>
-            <%= @user.last_name %></p>
+            <p><%= current_user.first_name %>
+            <%= current_user.last_name %></p>
         </div>
         <div>
-            <h4>Email address</h4>
-            <p><%= @user.email %></p>
+            <h4>Email</h4>
+            <p><%= current_user.email %></p>
         </div>
-        <button class="btn-large">
-            <%= link_to "Edit Account", edit_user_path(current_user) %>
-        </button>
+        <div class="edit">
+            <%= link_to edit_user_path(current_user) do %>
+            <i class="fas fa-user-edit"></i>
+            <% end %>
+        </div>
     </div>
 </div>

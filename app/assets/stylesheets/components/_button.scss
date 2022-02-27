@@ -12,3 +12,12 @@
 .small-button:hover {
   background-color: $purple;
 }
+
+.fa-user-edit {
+  font-size: 3vh;
+  transition: all 0.3s linear;
+}
+
+.fa-user-edit:hover {
+  color: $purple;
+}

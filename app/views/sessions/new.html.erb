@@ -1,13 +1,15 @@
 <div class="form">
-    <h2>Log in to access your account.</h2>
+    <h3>Log in to access your account.</h3>
 
-    <%= simple_form_for :sessions, local: true do |f| %>
-        <div><%= f.input :email %></div>
-        <br>
+    <%= form_with url: '/login', local: true do |f| %>
 
-    <%= f.label :password %><br>
-    <%= f.password_field :password %><br>
+        <%= f.label :email %><br>
+        <%= f.text_field :email, autofocus: true %><br>
 
-    <%= f.submit "Login", class:"small-button mt-5" %>
+        <%= f.label :password %><br>
+        <%= f.password_field :password %><br>
+
+        <%= f.submit "Login", class:"small-button mt-4" %>
+
     <% end %>
 </div>

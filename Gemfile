@@ -31,7 +31,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
-gem 'bcrypt', '3.1.7'
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'strong_password', '~> 0.0.9'
 gem 'bootstrap'
 gem 'gravtastic'

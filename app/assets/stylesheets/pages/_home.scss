@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+.home {
+  background: white;
+  border-radius: 10px;
+  margin: 5% 8%;
+  padding: 5%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: auto;
+  height: 60vh;
+  display: flex;
+  position: relative;
+  h2 {
+    margin-bottom: 48px;
+  }
+  span {
+    color: $blue;
+  }
+}
+
+.welcome-image {
+  height: 60vh;
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.19));
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+}

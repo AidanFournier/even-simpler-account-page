@@ -1,20 +1,25 @@
-<%= javascript_pack_tag 'hello_react' %>
-<div class="form">
-    <h2>Sign up to create your account today.</h2>
+<%#= javascript_pack_tag 'hello_react' %>
+<div data-controller="passwordtoggle">
+    <div class="form">
+        <h2>Sign up to create your account today.</h2>
 
-    <%= simple_form_for @user, local: true do |f| %>
-        <div class="d-flex">
-            <div class="me-4"><%= f.input :first_name %></div>
-            <div><%= f.input :last_name %></div>
-        </div>
-        <br>
+        <%= simple_form_for @user, local: true do |f| %>
+            <div class="d-flex">
+                <div class="me-4"><%= f.input :first_name %></div>
+                <div><%= f.input :last_name %></div>
+            </div>
+            <br>
 
-        <div><%= f.input :email %></div>
-        <br>
+            <div><%= f.input :email %></div>
+            <br>
 
-        <%= f.label :password %><br>
-        <%= f.password_field :password %><br>
-        
-        <%= f.submit "Sign Up", class:"small-button mt-5" %>
-    <% end %>
+            <%= f.label :password %>
+            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control p-2 my-2 unhide', placeholder: "Password", "data-passwordtoggle-target": "unhide" %>
+            <a data-action="click->passwordtoggle#password" class="password-field-icon-1 far fa-eye-slash"></a>
+
+            <br>
+            
+            <%= f.submit "Sign Up", class:"small-button mt-5" %>
+        <% end %>
+    </div>
 </div>

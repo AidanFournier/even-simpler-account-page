@@ -1,30 +1,32 @@
-<nav>
-    <div class="nav-center">
-    
-        <!-- nav header -->
-        <div class="nav-header">
-            <%= link_to root_path do %>
-                <% image_tag "favicon.ico", class: "logo"%>
-            <% end %>
-            <button class="nav-toggle">
-            <i class="fas fa-bars"></i>
-            </button>
-        </div>
+<div data-controller="navtoggle">
+    <nav>
+        <div class="nav-center">
+        
+            <!-- nav header -->
+            <div class="nav-header">
+                <%= link_to root_path do %>
+                    <% image_tag "favicon.ico", class: "logo"%>
+                <% end %>
+                <button class="nav-toggle">
+                    <i class="fas fa-bars" data-navtoggle-target="toggleicon" data-action="click->navtoggle#toggle"></i>
+                </button>
+            </div>
 
-        <!-- links -->
-        <ul class="links">
-             <% if !logged_in? %>
-                <li>
-                    <%= link_to "Login", login_path %>
-                </li>
-                <li>
-                    <%= link_to "Sign Up", new_user_path %>
-                </li>
-            <% else %>
-                <li>
-                    <%= link_to "Log Out", logout_path, method: :delete %>
-                </li>
-            <% end %>
-        </ul>    
-    </div>
-</nav>
+            <!-- links -->
+            <ul class="links" data-navtoggle-target="link">
+                <% if !logged_in? %>
+                    <li>
+                        <%= link_to "Login", login_path %>
+                    </li>
+                    <li>
+                        <%= link_to "Sign Up", new_user_path %>
+                    </li>
+                <% else %>
+                    <li>
+                        <%= link_to "Log Out", logout_path, method: :delete %>
+                    </li>
+                <% end %>
+            </ul>    
+        </div>
+    </nav>
+</div>

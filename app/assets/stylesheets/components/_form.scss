@@ -4,9 +4,22 @@
   margin: 3rem;
   padding: 5%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  h2,
   h3 {
-    margin-bottom: 24px;
+    margin-bottom: 5%;
   }
+}
+
+label {
+  color: $orange;
+}
+
+.form-control {
+  background-color: #e8f0fe;
+}
+
+.form-control:focus {
+  background-color: #e8f0fe;
 }
 
 .password-input {

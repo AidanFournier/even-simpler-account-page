@@ -1,12 +1,19 @@
-<div class="form">
-    <h3>Log in to access your account.</h3>
+<div data-controller="passwordtoggle">
+    <div class="form">
+        <h3>Log in to access your account.</h3>
 
-    <%= simple_form_for :sessions, local: true do |f| %>
-        <div><%= f.input :email %></div>
+        <%= simple_form_for :sessions, local: true do |f| %>
+            <div><%= f.input :email %></div>
+            <br>
+
+        <div class="form-goup password-input">
+            <%= f.label :password %>
+            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control p-2 my-2 unhide', placeholder: "Password", "data-passwordtoggle-target": "unhide" %>
+            <i data-action="click->passwordtoggle#password" class="password-field-icon far fa-eye-slash"></i>
+        </div>
         <br>
 
-    <%= f.input :password %>
-
-    <%= f.submit "Login", class:"small-button mt-4" %>
-    <% end %>
+        <%= f.submit "Login", class:"small-button mt-4" %>
+        <% end %>
+    </div>
 </div>

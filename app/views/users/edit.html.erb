@@ -1,18 +1,25 @@
-<div class="form">
-    <h3>Update your account information.</h3>
+<div data-controller="passwordtoggle">
+    <div class="form">
+        <h3>Update your account information.</h3>
 
-    <%= simple_form_for @user, local: true do |f| %>
-        <div class="d-flex">
-            <div class="me-4"><%= f.input :first_name %></div>
-            <div><%= f.input :last_name %></div>
-        </div>
-        <br>
+        <%= simple_form_for @user, local: true do |f| %>
+            <div class="d-flex">
+                <div class="me-4"><%= f.input :first_name %></div>
+                <div><%= f.input :last_name %></div>
+            </div>
+            <br>
 
-        <div><%= f.input :email %></div>
-        <br>
+            <div><%= f.input :email %></div>
+            <br>
 
-        <%= f.input :password %><br>
+            <div class="form-goup password-input">
+                <%= f.label :password %>
+                <%= f.password_field :password, autocomplete: "current-password", class: 'form-control p-2 my-2 unhide', placeholder: "Password", "data-passwordtoggle-target": "unhide" %>
+                <i data-action="click->passwordtoggle#password" class="password-field-icon far fa-eye-slash"></i>
+            </div>
+            <br>
 
-        <%= f.submit "Confirm Changes", class:"small-button mt-4" %>
-    <% end %>
+            <%= f.submit "Confirm Changes", class:"small-button mt-4" %>
+        <% end %>
+    </div>
 </div>

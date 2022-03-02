@@ -12,11 +12,11 @@
 
             <div><%= f.input :email %></div>
             <br>
-
-            <%= f.label :password %>
-            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control p-2 my-2 unhide', placeholder: "Password", "data-passwordtoggle-target": "unhide" %>
-            <a data-action="click->passwordtoggle#password" class="password-field-icon-1 far fa-eye-slash"></a>
-
+            <div class="form-goup password-input">
+                <%= f.label :password %>
+                <%= f.password_field :password, autocomplete: "current-password", class: 'form-control p-2 my-2 unhide', placeholder: "Password", "data-passwordtoggle-target": "unhide" %>
+                <i data-action="click->passwordtoggle#password" class="password-field-icon far fa-eye-slash"></i>
+            </div>
             <br>
             
             <%= f.submit "Sign Up", class:"small-button mt-5" %>

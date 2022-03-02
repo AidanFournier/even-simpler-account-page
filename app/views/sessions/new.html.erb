@@ -1,4 +1,4 @@
-<div data-controller="passwordtoggle">
+<div data-controller="password">
     <div class="form">
         <h3>Log in to access your account.</h3>
 
@@ -8,9 +8,13 @@
 
         <div class="form-goup password-input">
             <%= f.label :password %>
-            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control p-2 my-2 unhide', placeholder: "Password", "data-passwordtoggle-target": "unhide" %>
-            <i data-action="click->passwordtoggle#password" class="password-field-icon far fa-eye-slash"></i>
+            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control p-2 my-2 unhide', placeholder: "Password", "data-password-target": "password" %>
+            <i data-action="click->password#unhide" class="password-field-icon far fa-eye-slash"></i>
         </div>
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+
         <br>
 
         <%= f.submit "Login", class:"small-button mt-4" %>

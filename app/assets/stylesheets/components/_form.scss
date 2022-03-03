@@ -31,3 +31,12 @@ label {
     color: $pink;
   }
 }
+
+.progress {
+  height: 2vh;
+}
+
+.progress-bar {
+  width: 70%;
+  background-color: red;
+}

@@ -17,7 +17,7 @@
             <div data-controller="password">
                 <div class="form-goup password-input">
                     <%= f.label :password %>
-                    <%= f.password_field :password, autocomplete: "current-password", class: 'form-control p-2 my-2 unhide', placeholder: "Password", "data-password-target": "password", "data-action": "keydown->password#passwordinput" %>
+                    <%= f.password_field :password, autocomplete: "current-password", class: 'form-control p-2 my-2 unhide', placeholder: "Passwords", "data-password-target": "password", "data-action": "keyup->password#passwordinput" %>
                     <i data-action="click->password#unhide" class="password-field-icon far fa-eye-slash"></i>
                 </div>
                 <div class="progress">

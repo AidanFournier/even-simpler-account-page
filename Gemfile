@@ -35,6 +35,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'strong_password', '~> 0.0.9'
 gem 'bootstrap'
 gem 'gravtastic'
+gem 'zxcvbn'
 
 group :development, :test do
   gem 'pry-byebug'

@@ -1,11 +1,12 @@
 import { Controller } from "stimulus"
+import "zxcvbn"
 
 export default class extends Controller {
     static targets = [ "password", "progressbar", "suggestion" ]
 
     connect() {
         // console.log(this.suggestionTarget);
-        // console.log(zxcvbn(this.passwordTarget.value.score));
+        console.log(zxcvbn(this.passwordTarget.score));
       };
 
     // Hide/unhide action:
@@ -26,6 +27,6 @@ export default class extends Controller {
     passwordinput() {
       this.progressbarTarget.style.width = "20%";
       this.progressbarTarget.style.backgroundColor = "yellow";
-      // console.log(zxcvbn(this.passwordTarget.score));
+      console.log(this.passwordTarget.score);
     }
 }

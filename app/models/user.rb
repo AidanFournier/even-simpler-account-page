@@ -1,4 +1,5 @@
 require 'gravtastic'
+require 'zxcvbn'
 
 class User < ApplicationRecord
     include Gravtastic

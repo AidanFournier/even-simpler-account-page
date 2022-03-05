@@ -5,13 +5,9 @@ export default class extends Controller {
 
     connect() {
         // console.log(this.suggestionTarget);
-        console.log((this.passwordTarget));
+        // console.log((this.passwordTarget.value));
         // console.log(this.passwordTarget.input);
         // this.passwordValue = this.passwordTarget.value;
-
-        // this.testResult = zxcvbn(this.passwordTarget);
-        // this.num = this.testResult.score;
-        // console.log(this.num);
       };
 
     // Hide/unhide action:
@@ -28,10 +24,32 @@ export default class extends Controller {
     }
 
     // Password strength meter:
-    
-    passwordinput() {
-      this.progressbarTarget.style.width = "20%";
-      this.progressbarTarget.style.backgroundColor = "yellow";
-      // console.log(this.passwordTarget.score);
+
+    passwordbarfill(e) {
+      // Use zxcvbn library to calculate password strength:
+      this.password = e.target.value;
+      this.testResult = zxcvbn(this.password);
+      this.num = this.testResult.score * 100/4;
+      this.progressbarTarget.style.width = `${this.num}%`;
+
+    }
+
+    progresscolor(e) {
+      this.password = e.target.value;
+      this.testResult = zxcvbn(this.password);
+      console.log(this.testResult);
+      if (this.testResult.score === 0) {
+        this.progressbarTarget.style.backgroundColor = '#828282';
+      } else if (this.testResult.score === 1) {
+        this.progressbarTarget.style.backgroundColor = '#EA1111';
+      } else if (this.testResult.score === 2) {
+        this.progressbarTarget.style.backgroundColor = '#FFAD00';
+      } else if (this.testResult.score === 3) {
+        this.progressbarTarget.style.backgroundColor = '#FADE1E';
+      } else if (this.testResult.score === 4) {
+        this.progressbarTarget.style.backgroundColor = '#00b500';
+      } else {
+        return 'none';
+      }
     }
 }

@@ -11,6 +11,24 @@
 
 .small-button:hover {
   background-color: $purple;
+  color: white;
+}
+
+.big-button {
+  border-radius: 4px;
+  padding: 12px 64px;
+  font-size: larger;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: $light-blue;
+  transition: background-color 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-style: none;
+  color: white;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.34);
+}
+
+.big-button:hover {
+  background-color: $purple;
+  color: white;
 }
 
 .fa-user-edit {

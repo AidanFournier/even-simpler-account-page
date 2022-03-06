@@ -6,15 +6,23 @@
   padding: 5%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   width: auto;
-  height: 60vh;
+  height: auto;
   display: flex;
+  flex-direction: column;
   position: relative;
   h2 {
     margin-bottom: 48px;
   }
   span {
     color: $blue;
-    // font-weight: bolder;
+    // font-weight: 900;
+  }
+  .welcome-text {
+    margin-right: 40%;
+  }
+  .welcome-links {
+    display: flex;
+    margin: 8% 0;
   }
 }
 
@@ -24,4 +32,37 @@
   position: absolute;
   bottom: -10%;
   right: -5%;
+}
+
+@media screen and (max-width: 1300px) {
+  h3 {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .welcome-image {
+    height: 40vh;
+  }
+  h3 {
+    font-size: 18px !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home {
+    position: static;
+  }
+  .welcome-image {
+    position: static;
+    display: block;
+    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+  .welcome-text {
+    margin-top: 10%;
+    margin-right: 5%;
+  }
 }

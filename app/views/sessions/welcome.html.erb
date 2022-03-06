@@ -1,10 +1,26 @@
 <div class="home">
     <div>
-    <h2>Welcome to <span>myAccount</span></h2>
-    <h3>Keep your account information handy -</h3>
-    <h3>on the go, where ever you go.</h3>
+        <%= image_tag "welcome-image", class: "welcome-image" %>
     </div>
-    <div>
-    <%= image_tag "welcome-image", class: "welcome-image" %>
+   
+    <div class="welcome-text">
+        <h2>Welcome to <span>myAccount</span></h2>
+        <h3>Keep your account information handy -</h3>
+        <h3>on the go, where ever you go.</h3>
     </div>
+
+    <ul class="welcome-links">
+        <% if !logged_in? %>
+            <li>
+                <%= link_to "Log In", login_path, class: "big-button me-5" %>
+            </li>
+            <li>
+                <%= link_to "Sign Up", new_user_path, class: "big-button" %>
+            </li>
+        <% else %>
+            <li>
+                <%= link_to "Log Out", logout_path, class: "big-button", method: :delete %>
+            </li>
+        <% end %>
+    </ul>
 </div>

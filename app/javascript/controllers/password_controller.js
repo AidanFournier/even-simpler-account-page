@@ -31,13 +31,11 @@ export default class extends Controller {
       this.testResult = zxcvbn(this.password);
       this.num = this.testResult.score * 100/4;
       this.progressbarTarget.style.width = `${this.num}%`;
-
     }
 
     progresscolor(e) {
       this.password = e.target.value;
       this.testResult = zxcvbn(this.password);
-      console.log(this.testResult);
       if (this.testResult.score === 0) {
         this.progressbarTarget.style.backgroundColor = '#828282';
       } else if (this.testResult.score === 1) {
@@ -48,6 +46,25 @@ export default class extends Controller {
         this.progressbarTarget.style.backgroundColor = '#FADE1E';
       } else if (this.testResult.score === 4) {
         this.progressbarTarget.style.backgroundColor = '#00b500';
+      } else {
+        return 'none';
+      }
+    }
+
+    strengthsuggestion(e) {
+      this.password = e.target.value;
+      this.testResult = zxcvbn(this.password);
+      console.log(this.testResult);
+      if (this.testResult.score === 0) {
+        this.suggestionTarget.innerHTML = "Make sure it's strong! 🧐";
+      } else if (this.testResult.score === 1) {
+        this.suggestionTarget.innerHTML = "Not great 😬";
+      } else if (this.testResult.score === 2) {
+        this.suggestionTarget.innerHTML = "It'll do... 🤔";
+      } else if (this.testResult.score === 3) {
+        this.suggestionTarget.innerHTML = 'Much better! 😌';
+      } else if (this.testResult.score === 4) {
+        this.suggestionTarget.innerHTML = "Now that's a strong password! 🤯";
       } else {
         return 'none';
       }

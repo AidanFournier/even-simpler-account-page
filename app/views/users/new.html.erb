@@ -17,13 +17,13 @@
             <div data-controller="password">
                 <div class="form-goup password-input">
                     <%= f.label :password %>
-                    <%= f.password_field :password, autocomplete: "current-password", class: 'form-control p-2 my-2 unhide', placeholder: "Passwords", "data-password-target": "password", "data-action": "keyup->password#passwordbarfill keyup->password#progresscolor" %>
+                    <%= f.password_field :password, autocomplete: "current-password", class: 'form-control p-2 my-2 unhide', placeholder: "Passwords", "data-password-target": "password", "data-action": "keyup->password#passwordbarfill keyup->password#progresscolor keyup->password#strengthsuggestion" %>
                     <i data-action="click->password#unhide" class="password-field-icon far fa-eye-slash"></i>
                 </div>
                 <div class="progress">
                     <div class="progress-bar" data-password-target="progressbar"></div>
-                    <p data-password-target="suggestion"></p>
                 </div>
+                <p class="suggestion" data-password-target="suggestion">Suggestion</p>
             </div>
             
             <br>

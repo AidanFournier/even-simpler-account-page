@@ -5,9 +5,6 @@ export default class extends Controller {
 
     connect() {
         // console.log(this.suggestionTarget);
-        // console.log((this.passwordTarget.value));
-        // console.log(this.passwordTarget.input);
-        // this.passwordValue = this.passwordTarget.value;
       };
 
     // Hide/unhide action:

@@ -12,7 +12,6 @@
 
             <div><%= f.input :email %></div>
             <br>
-
            
             <div data-controller="password">
                 <div class="form-goup password-input">
@@ -23,10 +22,8 @@
                 <div class="progress">
                     <div class="progress-bar" data-password-target="progressbar"></div>
                 </div>
-                <p class="suggestion" data-password-target="suggestion">Suggestion</p>
+                <p class="suggestion" data-password-target="suggestion"></p>
             </div>
-            
-            <br>
             
             <%= f.submit "Sign Up", class:"small-button mt-5" %>
         <% end %>

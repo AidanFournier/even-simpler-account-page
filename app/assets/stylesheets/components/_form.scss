@@ -37,6 +37,12 @@ label {
 }
 
 .progress-bar {
-  width: 70%;
-  background-color: red;
+  width: 0;
+  background-color: #e9ecef;
+}
+
+.suggestion {
+  text-align: right;
+  margin-top: 1%;
+  font-size: smaller;
 }

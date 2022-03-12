@@ -8,10 +8,15 @@ Keep your account information handy - on the go, where ever you go.
 
 <br>
 
-
 ## Getting Started
 
 ### Setup
+
+First of all make sure you've created a rails app
+
+```bash
+rails new APP_NAME
+```
 
 Ensure you have the following gems in your Rails 'Gemfile'
 
@@ -20,7 +25,6 @@ gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '5.15.1'
 gem 'simple_form', '5.1.0'
 gem 'bcrypt', '3.1.16'
-gem 'bootstrap', '4.6.0'
 gem 'gravtastic', '3.2.6'
 gem 'zxcvbn', '0.1.7'
 ```
